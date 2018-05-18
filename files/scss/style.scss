@@ -118,6 +118,7 @@ button {
     background-color: #F6F6F6;
     min-height: 100vh;
     border-right: 1px solid #BBBBBB;
+    user-select: none;
 
     &__top_bar {
         height: $db_manager_top_bar;
@@ -133,6 +134,7 @@ button {
             display: flex;
             &__element {
                 margin: 0px 15px;
+                cursor: pointer;
                 i{
                     font-size: 22px;
                 }
@@ -205,5 +207,68 @@ button {
     background-color: #FFF;
     max-width: calc(100% - 300px);
     min-width: calc(100% - 300px);
+
+    /* Start of top bar */
+    &__top_bar {
+        height: $db_manager_top_bar;
+        background-color: $body_bg;
+        width: 100%;
+        user-select: none;
+
+        /* Start of breadcrumbs */
+        &__breadcrumbs {
+            height: $db_manager_top_bar/2.5;
+            background-color: #fff;
+            border-bottom: 1px solid #E8E8E8;
+            padding: 0px $rhs_padding_left;
+            display: flex;
+            align-items: center;
+
+            &__individual {
+                font-family: montserrat;
+                font-size: 12px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+
+                i{
+                    margin-right: 5px;
+                }
+
+                a{
+                    margin-left: 5px;
+                    text-decoration: none;
+                    text-transform: none;
+                }
+            }
+
+            &__icon {
+                margin: 0px 20px;
+            }
+        }
+        /* End of Top bar breadcrumbs */
+
+        &__navigation {
+            display: flex;
+            height: calc(#{$db_manager_top_bar} - #{$db_manager_top_bar/2.5});
+            align-items: flex-end;
+            padding-left: $rhs_padding_left;
+            &__element {
+                font-family: "open sans";
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 15px 30px;
+                margin-right: 1px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                &.active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    /* End of top bar main */
 }
 /* LHS */
