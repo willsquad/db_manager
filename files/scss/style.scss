@@ -270,5 +270,35 @@ button {
         }
     }
     /* End of top bar main */
+
+    /* Start of Content Section */
+    &__content_section {
+        padding: $rhs_padding_left $rhs_padding_left;
+        width: 100%;
+        padding-top: $rhs_padding_left*2;
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            font-family: montserrat;
+            font-size: 14px;
+        }
+        
+        td, th {
+            //border: 1px solid #F7F7F7;
+            border: none;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #F7F7F7;
+        }
+    }
+    /* Start of Content Section */
 }
 /* LHS */
