@@ -10,6 +10,7 @@
         </title>
         <link rel="stylesheet" href="files/css/bootstrap.css">
         <link rel="stylesheet" href="files/css/style.css">
+        <link rel="stylesheet" href="files/css/nice-select.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600|Open+Sans:300,400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -173,6 +174,38 @@
                             </table>
                             <!-- End of DB Table -->
 
+                            <!-- Start of Table Select all section -->
+                            <div class="select_all_section">
+                                <div class="select_all_section__left"><i class="material-icons">subdirectory_arrow_left</i></div>
+                                <div class="select_all_section__checkbox"><input type="checkbox"> Select All</div>
+                                <div class="select_all_section__select">
+                                    <select name="" id="">
+                                        <option value="">With Selected:</option>
+                                        <option value="">Do something</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Start of Table Select all section -->
+
+                            <!-- Create DB Table Section -->
+                            <div class="create_table">
+                                <div class="create_table__title">Create Table</div>
+                                <div class="create_table__input_divs">
+                                    <div class="create_table__input_divs__input">
+                                        Name:
+                                        <input type="text" class="name">
+                                    </div>
+                                    <div class="create_table__input_divs__input">
+                                        Number of columns:
+                                        <input type="text" class="columns">
+                                    </div>
+                                    <div class="create_table__input_divs__button">
+                                        <a>Go</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Create DB Table Section -->
+
                     </div>
                     <!-- RHS CONTENT SECTION -->
 
@@ -188,5 +221,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="files/js/main.js"></script>
+<script src="files/js/nice-select.min.js"></script>
 
 </html>

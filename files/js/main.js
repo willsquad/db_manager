@@ -7,4 +7,6 @@ $(document).ready(function() {
         self.addClass('active');
     });
 
+    $('select').niceSelect();
+
 });
