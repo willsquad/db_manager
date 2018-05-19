@@ -336,8 +336,43 @@ button {
                 }
             }
         }
+        .table_options {
+            display: flex;
+            color: #444444;
+            width: 200px;
+
+            &__action {
+                display: flex;
+                font-family: montserrat;
+                font-size: 12px;
+                margin-right: 20px;
+                align-items: center;
+                color: #444;
+                text-decoration: none;
+
+                i {
+                    font-size: 16px;
+                    margin-right: 2px;
+                }
+            }
+        }
         .table_rows {
             width: 150px;
+            min-width: 100px;
+            border-left: 1px solid #DFDFDF;
+        }
+        .table_id {
+            width: 150px;
+            min-width: 100px;
+            border-left: 1px solid #DFDFDF;
+        }
+        .table_email {
+            width: 400px;
+            min-width: 100px;
+            border-left: 1px solid #DFDFDF;
+        }
+        .table_name {
+            width: 400px;
             min-width: 100px;
             border-left: 1px solid #DFDFDF;
         }
