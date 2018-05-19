@@ -147,6 +147,7 @@ button {
                 font-size: 22px;
                 text-transform: uppercase;
                 margin-bottom: 0px;
+                font-weight: 600;
             }
         }
     }
@@ -231,6 +232,7 @@ button {
                 display: flex;
                 align-items: center;
                 text-transform: uppercase;
+                font-weight: 600;
 
                 i{
                     margin-right: 5px;
@@ -276,6 +278,8 @@ button {
         padding: $rhs_padding_left $rhs_padding_left;
         width: 100%;
         padding-top: $rhs_padding_left*2;
+        overflow: auto;
+        height: calc(100vh - #{$db_manager_top_bar});
 
         table {
             font-family: arial, sans-serif;
@@ -283,20 +287,65 @@ button {
             width: 100%;
         }
 
-        th {
-            font-family: montserrat;
-            font-size: 14px;
-        }
-        
         td, th {
             //border: 1px solid #F7F7F7;
             border: none;
             text-align: left;
-            padding: 8px;
+            padding: 14px;
+            height: 55px;
+        }
+
+        th {
+            font-family: montserrat;
+            font-size: 14px;
+        }
+
+        td {
+            font-size: 15px;
         }
         
         tr:nth-child(even) {
             background-color: #F7F7F7;
+        }
+
+        .table_checkbox {
+            width: 50px;
+        }
+        .table_name {
+            //width: 200px;
+        }
+        .table_actions {
+            border-left: 1px solid #DFDFDF;
+            display: flex;
+            color: #444444;
+
+            &__action {
+                display: flex;
+                font-family: montserrat;
+                font-size: 12px;
+                margin-right: 40px;
+                align-items: center;
+                color: #444;
+                text-decoration: none;
+
+                i {
+                    font-size: 16px;
+                    margin-right: 2px;
+                }
+            }
+        }
+        .table_rows {
+            width: 150px;
+            min-width: 100px;
+            border-left: 1px solid #DFDFDF;
+        }
+        .table_size {
+            width: 150px;
+            min-width: 100px;
+            border-left: 1px solid #DFDFDF;
+        }
+        td.table_rows, td.table_size {
+            font-size: 14px;
         }
     }
     /* Start of Content Section */

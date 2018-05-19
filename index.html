@@ -10,7 +10,7 @@
         </title>
         <link rel="stylesheet" href="files/css/bootstrap.css">
         <link rel="stylesheet" href="files/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600|Open+Sans:300,400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -82,36 +82,97 @@
 
                     <!-- RHS CONTENT SECTION -->
                     <div class="dbmanager_rhs__content_section">
+
+                            <!-- Start of DB Table -->
                             <table>
                                 <tr>
-                                    <th></th>
-                                    <th>Table</th>
-                                    <th>Actions</th>
-                                    <th>Rows</th>
-                                    <th>Size</th>
+                                    <th class="table_checkbox"></th>
+                                    <th class="table_name">Table</th>
+                                    <th class="table_actions">Actions</th>
+                                    <th class="table_rows">Rows</th>
+                                    <th class="table_size">Size</th>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td>table_1</td>
-                                    <td></td>
-                                    <td>5</td>
-                                    <td>128 KB</td>
+                                    <td class="table_checkbox"><input type="checkbox"></td>
+                                    <td class="table_name">table_1</td>
+                                    <td class="table_actions">
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">insert_drive_file</i> <span class="hidden-md-down">Browse</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">device_hub</i> <span class="hidden-md-down">Structure</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">search</i> <span class="hidden-md-down">Search</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">edit</i> <span class="hidden-md-down">Edit</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">close</i> <span class="hidden-md-down">Empty</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">delete_forever</i> <span class="hidden-md-down">Delete</span>
+                                        </a>  
+                                    </td>
+                                    <td class="table_rows">5</td>
+                                    <td class="table_size">128 KB</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td>table_2_name</td>
-                                    <td></td>
-                                    <td>10</td>
-                                    <td>512 KB</td>
+                                    <td class="table_checkbox"><input type="checkbox"></td>
+                                    <td class="table_name">table_2_name</td>
+                                    <td class="table_actions">
+                                            <a href="#" class="table_actions__action">
+                                                <i class="material-icons">insert_drive_file</i> <span class="hidden-md-down">Browse</span>
+                                            </a>
+                                            <a href="#" class="table_actions__action">
+                                                <i class="material-icons">device_hub</i> <span class="hidden-md-down">Structure</span>
+                                            </a>
+                                            <a href="#" class="table_actions__action">
+                                                <i class="material-icons">search</i> <span class="hidden-md-down">Search</span>
+                                            </a>
+                                            <a href="#" class="table_actions__action">
+                                                <i class="material-icons">edit</i> <span class="hidden-md-down">Edit</span>
+                                            </a>
+                                            <a href="#" class="table_actions__action">
+                                                <i class="material-icons">close</i> <span class="hidden-md-down">Empty</span>
+                                            </a>
+                                            <a href="#" class="table_actions__action">
+                                                <i class="material-icons">delete_forever</i> <span class="hidden-md-down">Delete</span>
+                                            </a>  
+                                    </td>
+                                    <td class="table_rows">10</td>
+                                    <td class="table_size">512 KB</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td>table_3_name</td>
-                                    <td></td>
-                                    <td>8</td>
-                                    <td>256 KB</td>
+                                    <td class="table_checkbox"><input type="checkbox"></td>
+                                    <td class="table_name">table_3_name</td>
+                                    <td class="table_actions">
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">insert_drive_file</i> <span class="hidden-md-down">Browse</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">device_hub</i> <span class="hidden-md-down">Structure</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">search</i> <span class="hidden-md-down">Search</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">edit</i> <span class="hidden-md-down">Edit</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">close</i> <span class="hidden-md-down">Empty</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">delete_forever</i> <span class="hidden-md-down">Delete</span>
+                                        </a>                              
+                                    </td>
+                                    <td class="table_rows">8</td>
+                                    <td class="table_size">256 KB</td>
                                 </tr>
                             </table>
+                            <!-- End of DB Table -->
+
                     </div>
                     <!-- RHS CONTENT SECTION -->
 
