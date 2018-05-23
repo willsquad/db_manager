@@ -7,6 +7,13 @@ body {
     font-family: "open sans";
 }
 
+label {
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 input {
     font-family: "open sans";
 }
@@ -135,19 +142,29 @@ button {
             &__element {
                 margin: 0px 15px;
                 cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                }
+
                 i{
                     font-size: 22px;
+                    color: #212121;
                 }
             }
         }
 
         &__logo {
+            a {
+                text-decoration: none;
+            }
             h2 {
                 font-family: montserrat;
                 font-size: 22px;
                 text-transform: uppercase;
                 margin-bottom: 0px;
                 font-weight: 600;
+                color: #F44336;
             }
         }
     }
@@ -203,6 +220,206 @@ button {
 }
 /* LHS */
 
+.orange_button {
+    background-color: #FF4800;
+    padding: 10px;
+    display: flex;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    align-items: center;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    //text-shadow: 1px 1px 1px #0000005c;
+    text-decoration: none;
+    justify-content: center;
+
+    i {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+}
+.grey_button {
+    background-color: #E1E1E1;
+    padding: 12px 14px;
+    display: flex;
+    color: #212121;
+    text-transform: uppercase;
+    font-size: 13px;
+    align-items: center;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    //text-shadow: 1px 1px 1px #0000005c;
+    text-decoration: none;
+    justify-content: center;
+
+    &:hover {
+        color: #212121;
+    }
+}
+
+.green_button {
+    min-width: 100px;
+    max-width: 150px;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+/* Prompt Overlay */
+.prompt_overlay {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    user-select: none;
+    //height: 100vh;
+
+    .prompt_add_database_div {
+        //height: 175px;
+        background: #fff;
+        margin: 0 auto;
+        margin-top: 3em;
+        box-shadow: 0 1px 3px rgba(0,0,0,.3);
+        transform: translate(0,0);
+        padding: 30px 30px 35px;
+
+        min-width: 40%;
+        max-width: 450px;
+
+        display: none;
+
+        p{
+            margin-bottom: 1.5em;
+            text-align: center;
+            font-weight: 600;
+            margin-top: .5em;
+            @include media-breakpoint-down(sm){
+                font-size: 15px;
+            }
+        }
+
+        
+    }
+    .prompt_button_container {
+        text-align: center;
+
+        .prompt_button {
+            position: relative;
+            min-width: 80px;
+            padding: 8px 12px;
+            font-weight: 600;
+            text-align: center;
+            color: #FFF;
+            border-radius: 4px;
+            transition: all 0.2s;
+            margin-left: 10px;
+            border: none;
+            font-size: 14px;
+            border: none;
+            outline: none;
+
+            &.cancel_button {
+                background-color: #aaa;
+            }
+
+
+            &.cancle_icon {
+                position: absolute;
+                top: 10px;
+                right: 7px;
+                padding: 5px;
+                min-width: 40px;
+                border-radius: 0px;
+                background-color: #fff;
+                color: #333;
+                font-weight: 600;
+                line-height: 1.25em;
+            }
+        }
+    }
+/*     .prompt_export_contacts {
+        display: block;
+    } */
+
+    .prompt_page_title {
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #212121;
+            font-family: montserrat;
+            margin-bottom: 40px;
+        }
+    }
+
+    .input_div {
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        
+        &.upload_photo_input_div {
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+
+        .label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .input {
+            input, textarea {
+                background-color: #EBEBEB;
+                width: 100%;
+                border-radius: 4px;
+                padding: 10px;
+                border:none;
+                outline: none;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
+
+                &.upload_photo_input {
+                    background: none;
+                    box-shadow: none;
+                    padding: 3px 0px;
+                }
+            }
+            textarea {
+                min-height: 105px;
+            }
+
+            &.half_width {
+                width: 50%;
+            }
+        }
+    }
+
+    .save_cancel_project_buttons_div {
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        display: flex;
+
+        a {
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+    }
+}
+/* Prompt Overlay */
+
 /* RHS */
 .dbmanager_rhs {
     background-color: #FFF;
@@ -213,7 +430,7 @@ button {
     /* Start of top bar */
     &__top_bar {
         height: $db_manager_top_bar;
-        background-color: $body_bg;
+        background-color: #444;
         width: 100%;
         user-select: none;
 
@@ -243,6 +460,7 @@ button {
                     margin-left: 5px;
                     text-decoration: none;
                     text-transform: none;
+                    color: #F44336;
                 }
             }
 
@@ -266,8 +484,10 @@ button {
                 margin-right: 1px;
                 cursor: pointer;
                 transition: all 0.3s ease;
+                color: #fff;
                 &.active {
                     background-color: #fff;
+                    color: #F44336;
                 }
             }
         }
@@ -339,7 +559,7 @@ button {
         .table_options {
             display: flex;
             color: #444444;
-            width: 200px;
+            //width: 200px;
 
             &__action {
                 display: flex;
@@ -375,6 +595,11 @@ button {
             width: 400px;
             min-width: 100px;
             border-left: 1px solid #DFDFDF;
+
+            a {
+                color: #1A237E;
+                text-decoration: none;
+            }
         }
         .table_size {
             width: 150px;
@@ -391,6 +616,7 @@ button {
         .select_all_section {
             margin-top: 30px;
             display: flex;
+            user-select: none;
             &__left {
                 padding-left: 12px;
                 position: relative;
@@ -404,6 +630,7 @@ button {
                 display: flex;
                 align-items: center;
                 margin-left: 15px;
+                height: 42px;
 
                 input {
                     margin-right: 10px;
@@ -411,6 +638,14 @@ button {
             }
             &__select {
                 margin-left: 30px;
+            }
+            &__edit_delete {
+                display: flex;
+                margin-left: 50px;
+
+                a {
+                    margin-right:30px;
+                }
             }
         }
         /* End of select_all_section */
@@ -433,7 +668,7 @@ button {
                 top: -25px;
                 left: 35px;
                 background: #fff;
-                z-index: 1000;
+                z-index: 1;
                 font-size: 14px;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -452,7 +687,7 @@ button {
                 }
                 input {
                     background-color: #F7F7F7;
-                    padding: 14px;
+                    padding: 12px;
                     margin-left: 5px;
                     border: none;
                     outline: none;
@@ -481,6 +716,50 @@ button {
             
         }
         /* End of Create Table Section */
+
+        /* Start of Pagination Section */
+        .pagination_section {
+            margin-top: 60px;
+            display: flex;
+            user-select: none;
+
+            &>div {
+                display: flex;
+                align-items: center;
+            }
+
+            &__icons {
+                margin-left: 50px;
+
+                a{
+                    color: #212121;
+                    margin-right: 10px;
+                    padding: 10px;
+                }
+
+                i{
+                    
+                }
+            }
+
+            &__show_all {
+                margin-left: 60px;
+                font-size: 14px;
+                input {
+                    margin-right: 5px;
+                }
+            }
+
+            &__number_of_rows {
+                margin-left:60px;
+                font-size: 14px;
+                
+                .nice-select {
+                    margin-left: 10px;
+                }
+            }
+        }
+        /* Start of Pagination Section */
 
     }
     /* End of Content Section */

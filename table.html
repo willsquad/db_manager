@@ -28,10 +28,10 @@
                     <!-- LHS TOP BAR -->
                     <div class="dbmanager_lhs__top_bar col-12">
                         <div class="dbmanager_lhs__top_bar__logo">
-                            <h2>DB Manager</h2>
+                            <a href="index.html"><h2>DB Manager</h2></a>
                         </div>
                         <div class="dbmanager_lhs__top_bar__menu">
-                            <div class="dbmanager_lhs__top_bar__menu__element"><i class="material-icons">home</i></div>
+                            <div class="dbmanager_lhs__top_bar__menu__element"><a href="index.html"><i class="material-icons">home</i></a></div>
                             <div class="dbmanager_lhs__top_bar__menu__element"><i class="material-icons">settings</i></div>
                             <div class="dbmanager_lhs__top_bar__menu__element"><i class="material-icons">insert_drive_file</i></div>
                             <div class="dbmanager_lhs__top_bar__menu__element"><i class="material-icons">refresh</i></div>
@@ -43,12 +43,12 @@
                     <!-- LHS DB SECTION -->
                     <div class="dbmanager_lhs__db_section">
                         <div class="dbmanager_lhs__db_section__create_db">
-                            <a href="#" class="dbmanager_lhs__db_section__create_db__a_element"><i class="material-icons">add_circle_outline</i> Create Database</a>
+                            <a href="#" class="dbmanager_lhs__db_section__create_db__a_element" id="create_database"><i class="material-icons">add_circle_outline</i> Create Database</a>
                         </div>
                         <div class="dbmanager_lhs__db_section__show_dbs">
-                            <a href="#" class="dbmanager_lhs__db_section__show_dbs__a_element active"><i class="fas fa-database"></i> Blog_db</a>
-                            <a href="#" class="dbmanager_lhs__db_section__show_dbs__a_element"><i class="fas fa-database"></i> demo_db_123</a>
-                            <a href="#" class="dbmanager_lhs__db_section__show_dbs__a_element"><i class="fas fa-database"></i> website_db_main</a>
+                            <a href="#" class="dbmanager_lhs__db_section__show_dbs__a_element active" data-db="Blog_db"><i class="fas fa-database"></i> Blog_db</a>
+                            <a href="#" class="dbmanager_lhs__db_section__show_dbs__a_element" data-db="demo_db_123"><i class="fas fa-database"></i> demo_db_123</a>
+                            <a href="#" class="dbmanager_lhs__db_section__show_dbs__a_element" data-db="website_db_main"><i class="fas fa-database"></i> website_db_main</a>
                         </div>
                     </div>
                     <!-- LHS DB SECTION -->
@@ -60,15 +60,49 @@
             <!-- DB Manager RHS -->
             <div class="dbmanager_rhs col-12 col-md-8 col-lg-9">
                 <div class="row">
+
+                <!-- Start of Prompt Overlay -->
+                <div class="prompt_overlay col-12">
+
+                        <!-- Create Database -->
+                        <div class="prompt_add_database_div col-12 col-sm-6 col-md-7 col-lg-5 col-xl-4 animated slideInDown">
+                            
+                            <div class="prompt_page_title">
+                                <h2>Create Database</h2>
+                            </div>
+
+                            <div class="input_div">
+                                <div class="label">Database Name</div>
+                                <div class="input"><input type="text"></div>
+                            </div>
+                            <div class="input_div">
+                                <div class="label">Collation</div>
+                                <div class="input"><input type="text" value="utf8_general_ci"></div>
+                            </div>
+
+                            <div class="search_projects_div save_cancel_project_buttons_div">
+                                    <a href="#" class="grey_button cancel_button cancel_database_modal_js">Cancel</a>
+                                    <a href="#" class="orange_button green_button cancel_database_modal_js">Create</a>
+                                </div>
+                            
+                            <div class="prompt_button_container">
+                                    <button class="prompt_button cancle_icon cancel_database_delete_js"><i class="material-icons">close</i></button>
+                            </div>
+                        </div>
+                        <!-- Create Database -->
+                        
+                    </div>
+                    <!-- End of Prompt Overlay -->
+
                     <!-- RHS TOP BAR -->
                     <div class="dbmanager_rhs__top_bar">
                         <!-- RHS TOP BAR BREADCRUMBS -->
                         <div class="dbmanager_rhs__top_bar__breadcrumbs">
-                            <div class="dbmanager_rhs__top_bar__breadcrumbs__individual"><i class="material-icons">computer</i> Server: <a href="#">127.0.0.1</a></div>
+                            <div class="dbmanager_rhs__top_bar__breadcrumbs__individual"><i class="material-icons">computer</i> Server: <a href="index.html">127.0.0.1</a></div>
                             <div class="dbmanager_rhs__top_bar__breadcrumbs__icon"><i class="fas fa-angle-right"></i></div>
-                            <div class="dbmanager_rhs__top_bar__breadcrumbs__individual">Database: <a href="#">Blog_db</a></div>
+                            <div class="dbmanager_rhs__top_bar__breadcrumbs__individual">Database: <a href="index.html" id="top_nav_db_name">Blog_db</a></div>
                             <div class="dbmanager_rhs__top_bar__breadcrumbs__icon"><i class="fas fa-angle-right"></i></div>
-                            <div class="dbmanager_rhs__top_bar__breadcrumbs__individual">Table: <a href="#">table_1</a></div>
+                            <div class="dbmanager_rhs__top_bar__breadcrumbs__individual">Table: <a href="table.html" id="top_nav_table_name">table_1</a></div>
                         </div>
                         <!-- RHS TOP BAR BREADCRUMBS -->
                         <!-- RHS TOP BAR NAVIGATION-->
@@ -90,14 +124,14 @@
                             <table>
                                 <tr>
                                     <th class="table_checkbox"></th>
-                                    <th class="table_options">options</th>
+                                    <th class="table_options"></th>
                                     <th class="table_id">id</th>
                                     <th class="table_email">email</th>
                                     <th class="table_name">first_name</th>
                                     <th class="table_name">last_name</th>
                                 </tr>
                                 <tr>
-                                    <td class="table_checkbox"><input type="checkbox"></td>
+                                    <td class="table_checkbox"><input class="checkbox" type="checkbox" name="check[]"></td>
                                     <td class="table_options">
                                         <a href="#" class="table_actions__action">
                                             <i class="material-icons">create</i> <span class="hidden-md-down">Edit</span>
@@ -107,8 +141,38 @@
                                         </a>
                                     </td>
                                     <td class="table_id">1</td>
-                                    <td class="table_email">mail@xyz.com</td>
+                                    <td class="table_email">abc@xyz.com</td>
                                     <td class="table_name">John</td>
+                                    <td class="table_name">Smith</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_checkbox"><input class="checkbox" type="checkbox" name="check[]"></td>
+                                    <td class="table_options">
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">create</i> <span class="hidden-md-down">Edit</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">delete_forever</i> <span class="hidden-md-down">Delete</span>
+                                        </a>
+                                    </td>
+                                    <td class="table_id">2</td>
+                                    <td class="table_email">def@xyz.com</td>
+                                    <td class="table_name">Jane</td>
+                                    <td class="table_name">Doe</td>
+                                </tr>
+                                <tr>
+                                    <td class="table_checkbox"><input class="checkbox" type="checkbox" name="check[]"></td>
+                                    <td class="table_options">
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">create</i> <span class="hidden-md-down">Edit</span>
+                                        </a>
+                                        <a href="#" class="table_actions__action">
+                                            <i class="material-icons">delete_forever</i> <span class="hidden-md-down">Delete</span>
+                                        </a>
+                                    </td>
+                                    <td class="table_id">3</td>
+                                    <td class="table_email">pqr@xyz.com</td>
+                                    <td class="table_name">Tom</td>
                                     <td class="table_name">Smith</td>
                                 </tr>
                             </table>
@@ -117,15 +181,44 @@
                             <!-- Start of Table Select all section -->
                             <div class="select_all_section">
                                 <div class="select_all_section__left"><i class="material-icons">subdirectory_arrow_left</i></div>
-                                <div class="select_all_section__checkbox"><input type="checkbox"> Select All</div>
-                                <!-- <div class="select_all_section__select">
+                                <div class="select_all_section__checkbox"><label for="select_all"><input type="checkbox" id="select_all"> Select All</label></div>
+                                <div class="select_all_section__edit_delete">
+                                    <a href="#" class="table_actions__action">
+                                        <i class="material-icons">create</i> <span class="hidden-md-down">Edit</span>
+                                    </a>
+                                    <a href="#" class="table_actions__action">
+                                        <i class="material-icons">delete_forever</i> <span class="hidden-md-down">Delete</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Start of Table Select all section -->
+
+                            <!-- Start of Pagination section -->
+                            <div class="pagination_section">
+                                <div class="pagination_section__select">
                                     <select name="" id="">
                                         <option value="">1</option>
                                         <option value="">2</option>
                                     </select>
-                                </div> -->
+                                </div>
+                                <div class="pagination_section__icons">
+                                    <a href="#"><i class="fas fa-angle-right"></i></a>
+                                    <a href="#"><i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                                <div class="pagination_section__show_all">
+                                    <input type="checkbox"> Show all
+                                </div>
+                                <div class="pagination_section__number_of_rows">
+                                    Number of Rows:
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">25</option>
+                                        <option value="">50</option>
+                                        <option value="">100</option>
+                                    </select>
+                                </div>
                             </div>
-                            <!-- Start of Table Select all section -->
+                            <!-- End of Pagination Section -->
 
                     </div>
                     <!-- RHS CONTENT SECTION -->
