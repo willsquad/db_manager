@@ -427,6 +427,10 @@ button {
     min-width: calc(100% - 300px);
     overflow: auto;
 
+    &.overlay_applied {
+        overflow-y: hidden;
+    }
+
     /* Start of top bar */
     &__top_bar {
         height: $db_manager_top_bar;
